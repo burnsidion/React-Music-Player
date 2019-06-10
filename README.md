@@ -8,20 +8,20 @@ A React based app for listening to your favorite music.
 
 ## Usage
 
-Open https://young-beyond-10080.herokuapp.com/
+-Open https://young-beyond-10080.herokuapp.com/
 
-Select a song locally on your device
+-Select a song locally on your device
 
-![song-selection-link](images/Song Selection.png)
+![song-selection-link](images/SongSelection.png)
 
 
-Once song is selected, press play to watch the visualization.
+-Once song is selected, press play to watch the visualization.
 
-![play-music-link](images/Play Music.png)
+![play-music-link](images/PlayMusic.png)
 
-Enjoy your music!!
+-Enjoy your music!!
 
-:![listen-to-music-link](images/Listen to music.png)
+![listen-to-music-link](images/ListentoMusic.png)
 
 
 ## Support
