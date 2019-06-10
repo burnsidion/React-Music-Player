@@ -36,7 +36,7 @@ class App extends Component{
         <input type="file" id="files" name="files[]" multiple="multiple"/>
         <audio id="audio" ref={(audioTag) => {
           this.audio = audioTag
-        }}/>
+        }}/> 
       </div>
     </div>)
   }
