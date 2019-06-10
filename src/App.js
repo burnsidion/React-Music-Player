@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import PlayButton from './components/playButton';
+import {handleFileSelect, getAnimation} from './components/animation';
 
 class App extends Component{
   constructor(props){
@@ -9,17 +10,20 @@ class App extends Component{
       isMusicPlaying: false
     }
     this.handleClick = this.handleClick.bind(this);
+    getAnimation();
   }
 
   componentDidMount(){
     document.getElementById('files')
-
+    .addEventListener('change', handleFileSelect, false)
   }
 
   async handleClick(event){
     if(this.state.isMusicPlaying === false){
+      await this.audio.play()
       this.setState({isMusicPlaying:true})
     } else {
+      await this.audio.pause()
       this.setState({isMusicPlaying:false})
     }
   }
@@ -30,6 +34,9 @@ class App extends Component{
         <h1>Lets make some reactness!!</h1>
         <PlayButton toggleButton={this.handleClick} isPlaying={this.state.isMusicPlaying}/>
         <input type="file" id="files" name="files[]" multiple="multiple"/>
+        <audio id="audio" ref={(audioTag) => {
+          this.audio = audioTag
+        }}/>
       </div>
     </div>)
   }
