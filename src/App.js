@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
+import PlayButton from './components/playButton';
 
 class App extends Component{
   constructor(props){
@@ -9,6 +9,11 @@ class App extends Component{
       isMusicPlaying: false
     }
     this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentDidMount(){
+    document.getElementById('files')
+
   }
 
   async handleClick(event){
@@ -23,6 +28,7 @@ class App extends Component{
     return(<div id="container">
       <div id="hook">
         <h1>Lets make some reactness!!</h1>
+        <PlayButton toggleButton={this.handleClick} isPlaying={this.state.isMusicPlaying}/>
         <input type="file" id="files" name="files[]" multiple="multiple"/>
       </div>
     </div>)
