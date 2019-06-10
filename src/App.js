@@ -31,7 +31,7 @@ class App extends Component{
   render(){
     return(<div id="container">
       <div id="hook">
-        <h1>Lets make some reactness!!</h1>
+        <h1>Play Music</h1>
         <PlayButton toggleButton={this.handleClick} isPlaying={this.state.isMusicPlaying}/>
         <input type="file" id="files" name="files[]" multiple="multiple"/>
         <audio id="audio" ref={(audioTag) => {
