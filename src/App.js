@@ -10,6 +10,7 @@ class App extends Component{
       isMusicPlaying: false
     }
     this.handleClick = this.handleClick.bind(this);
+    //Line 14 is generally a no no in the React world, but given the scope of this app, its not a big deal.
     getAnimation();
   }
 
@@ -36,7 +37,7 @@ class App extends Component{
         <input type="file" id="files" name="files[]" multiple="multiple"/>
         <audio id="audio" ref={(audioTag) => {
           this.audio = audioTag
-        }}/> 
+        }}/>
       </div>
     </div>)
   }
